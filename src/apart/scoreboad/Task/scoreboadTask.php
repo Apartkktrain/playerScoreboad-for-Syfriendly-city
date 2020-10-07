@@ -25,9 +25,9 @@ class scoreboadTask extends Task
 		{
 			$c = Server::getInstance()->getOnlinePlayers();
 			$count = count($c);
-			$x = $player->getX();
-			$y = $player->getY();
-			$z = $player->getZ();
+			$x = $player->getFloorX();
+			$y = $player->getFloorY();
+			$z = $player->getFloorX();
 			$ip = $player->getAddress();
 			$mymoney = API::getInstance()->get($player);
 
@@ -70,7 +70,7 @@ class scoreboadTask extends Task
 			$entry->type = ScorePacketEntry::TYPE_FAKE_PLAYER;
 			$entry->scoreboardId = ++$id;
 			$entry->score = ++$score;
-			$entry->customName = "§bオンライン:${c}人";
+			$entry->customName = "§bオンライン: $count 人";
 			$pk->entries[] = $entry;
 
 			$entry = new ScorePacketEntry();
