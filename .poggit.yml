@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Apartkktrain/playerScoreboad-for-Syfriendly-city
+build-by-default: true
+branches:
+- main
+projects:
+  playerScoreboad-for-Syfriendly-city:
+    path: ""
+...
